@@ -3,12 +3,15 @@ body {
 }
 
 .navbar {
+  background-image: linear-gradient(to right, #ddba88, skyblue);
+  padding: 10px;
+}
+
+.nav-inline {
   display: inline-block;
-  background-image: linear-gradient(to right, skyblue, lightblue);
-  width: 100%;
   margin: 0px;
 }
 
-.navbar-name {
-  padding: 0px 0px 0px 10px;
+.navbar-1 {
+  padding: 0px 0px 0px 70%;
 }
