@@ -7,6 +7,9 @@ body {
   padding: 10px;
   vertical-align: bottom;
 }
+.navbar-name {
+  font-size: 25px;
+}
 
 .nav-inline {
   display: inline-block;
@@ -15,4 +18,8 @@ body {
 
 .navbar-1 {
   padding: 0px 0px 0px 70%;
+}
+
+p {
+  font-size: 16px;
 }
