@@ -21,27 +21,15 @@
       width: 33%;
       position: relative;
       overflow: hidden;
-      animation: rainbowBorder 5s linear infinite alternate;
+      animation: rotateRainbow 5s linear infinite;
     }
 
-    @keyframes rainbowBorder {
+    @keyframes rotateRainbow {
       0% {
-        border: 5px solid red;
-      }
-      20% {
-        border: 5px solid orange;
-      }
-      40% {
-        border: 5px solid yellow;
-      }
-      60% {
-        border: 5px solid green;
-      }
-      80% {
-        border: 5px solid blue;
+        transform: rotate(0deg);
       }
       100% {
-        border: 5px solid purple;
+        transform: rotate(360deg);
       }
     }
 
