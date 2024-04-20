@@ -13,37 +13,28 @@
       align-items: center;
       flex-direction: column;
       background: linear-gradient(217deg, rgba(255, 180, 180, .8), rgba(255, 180, 180, 0) 70.71%),
-              linear-gradient(127deg, rgba(180, 255, 180, .8), rgba(180, 255, 180, 0) 70.71%),
-              linear-gradient(336deg, rgba(180, 180, 255, .8), rgba(180, 180, 255, 0) 70.71%);
+                  linear-gradient(127deg, rgba(180, 255, 180, .8), rgba(180, 255, 180, 0) 70.71%),
+                  linear-gradient(336deg, rgba(180, 180, 255, .8), rgba(180, 180, 255, 0) 70.71%);
       background-repeat: no-repeat; /* Prevent background from repeating */
       background-size: cover; /* Cover the entire .headbar element */
-}
-
-    .headbar {
-      background-image: linear-gradient(40deg, #ffc969, skyblue);
-      vertical-align: bottom;
-      border-radius: 50px;
-      width: 33%;
+      height: 100vh; /* Full height of the viewport */
+      margin: 0; /* Remove default margin */
     }
 
-    @keyframes rainbowBorder {
+    .headbar {
+      background-image: linear-gradient(to left, #ffc969, #ffc568, skyblue, #cf9fff);
+      background-size: 200% 100%; /* Double the width for the gradient animation */
+      border-radius: 50px;
+      width: 33%;
+      animation: gradientMove 5s linear infinite alternate; /* Animation for gradient movement */
+    }
+
+    @keyframes gradientMove {
       0% {
-        border: 5px solid red;
-      }
-      20% {
-        border: 5px solid orange;
-      }
-      40% {
-        border: 5px solid yellow;
-      }
-      60% {
-        border: 5px solid green;
-      }
-      80% {
-        border: 5px solid blue;
+        background-position: 100% 0; /* Start from right */
       }
       100% {
-        border: 5px solid purple;
+        background-position: 0 0; /* Move to left */
       }
     }
 
