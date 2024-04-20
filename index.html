@@ -25,7 +25,8 @@
       background-image: linear-gradient(to left, #ffc969, #ffc568, skyblue, #cf9fff, #cf9fff);
       background-size: 300% 100%; /* Five colors, so triple the width for the gradient animation */
       border-radius: 50px;
-      width: 33%;
+      width: 90%; /* Adjusted width for mobile responsiveness */
+      max-width: 600px; /* Max width to prevent stretching on larger screens */
       animation: gradientMove 3s linear infinite alternate; /* Animation for gradient movement */
     }
 
@@ -39,7 +40,7 @@
     }
 
     .title {
-      font-size: 30px;
+      font-size: 24px; /* Adjusted font size for mobile */
       padding: 10px;
       text-align: center;
     }
@@ -62,6 +63,21 @@
 
     .page-links {
       text-align: center;
+      display: flex; /* Use flexbox */
+      justify-content: center; /* Center items horizontally */
+      align-items: center; /* Center items vertically */
+    }
+
+    .page-links a,
+    .page-links p {
+      margin: 0 5px; /* Add spacing between elements */
+    }
+
+    /* Media query for mobile devices */
+    @media only screen and (max-width: 600px) {
+      .title {
+        font-size: 18px; /* Adjust font size for smaller screens */
+      }
     }
   </style>
 </head>
