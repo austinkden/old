@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="https://pbs.twimg.com/profile_images/1775345316340060160/Rb4r0OBI_400x400.jpg">
+  <title>austin_kden</title>
+  <style>
+    body {
+      font-family: Helvetica;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(217deg, rgba(255, 180, 180, .8), rgba(255, 180, 180, 0) 70.71%),
+                  linear-gradient(127deg, rgba(180, 255, 180, .8), rgba(180, 255, 180, 0) 70.71%),
+                  linear-gradient(336deg, rgba(180, 180, 255, .8), rgba(180, 180, 255, 0) 70.71%);
+      background-repeat: no-repeat; /* Prevent background from repeating */
+      background-size: cover; /* Cover the entire .headbar element */
+      height: 100vh; /* Full height of the viewport */
+      margin: 0; /* Remove default margin */
+    }
 
+    .headbar {
+      background-image: linear-gradient(to left, #ffc969, #ffc568, skyblue, #cf9fff, #cf9fff);
+      background-size: 300% 100%; /* Five colors, so triple the width for the gradient animation */
+      border-radius: 50px;
+      width: 90%; /* Adjusted width for mobile responsiveness */
+      max-width: 600px; /* Max width to prevent stretching on larger screens */
+      animation: gradientMove 3s linear infinite alternate; /* Animation for gradient movement */
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 100% 0; /* Start from right */
+      }
+      100% {
+        background-position: 0 0; /* Move to left */
+      }
+    }
+
+    .title {
+      font-size: 30px; /* Adjusted font size for mobile */
+      padding: 10px;
+      text-align: center;
+    }
+
+    .socials {
+      margin-top: 20px;
+    }
+
+    .pfp {
+      position: relative;
+      overflow: hidden;
+      animation: rainbowBorder 5s linear infinite alternate;
+    }
+
+    a {
+      font-size: 16px;
+      color: black;
+      text-decoration: underline;
+    }
+
+        .redlink {
+      color: red;
+    }
+    
+    .page-links {
+      text-align: center;
+      display: flex; /* Use flexbox */
+      justify-content: center; /* Center items horizontally */
+      align-items: center; /* Center items vertically */
+    }
+
+    .page-links a,
+    .page-links p {
+      margin: 0 5px; /* Add spacing between elements */
+      display: inline; /* Display elements inline */
+    }
+
+    /* Media query for mobile devices */
+    @media only screen and (max-width: 600px) {
+      .title {
+        font-size: 24px; /* Adjust font size for smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img src="https://pbs.twimg.com/profile_images/1775345316340060160/Rb4r0OBI_400x400.jpg" style="height: 100px; width: 100px; border: solid 5px black; border-radius: 20px; margin: 12px; margin-top: 10px;" class="pfp">
+  </div>
+  <div class="headbar">
+    <p class="title"><strong>austin_kden</strong></p>
+  </div>
+  <div class="body-text">
+    <p style="margin-top: 15px;">I'm interested in commercial aviation, air traffic control, and really anything related to the logistical operations of airports, airlines, and aircraft.</p>
+    <p>I live approximately 20 miles on final of runway 35R at Denver International Airport (DEN/KDEN). The closest waypoint to me is <a href="https://opennav.com/waypoint/US/DORRY"><strong>DORRY</strong></a>.</p>
+  </div>
+</body>
+</html>
