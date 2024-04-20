@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="https://pbs.twimg.com/profile_images/1775345316340060160/Rb4r0OBI_400x400.jpg">
-  <title>austin_kden - Flight Simulation</title>
+  <title>austin_kden</title>
   <style>
     body {
       font-family: Helvetica;
@@ -24,9 +24,10 @@
     .headbar {
       background-image: linear-gradient(to left, #ffc969, #ffc568, skyblue, #cf9fff, #cf9fff);
       background-size: 300% 100%; /* Five colors, so triple the width for the gradient animation */
-      border-radius: 50px;
-      width: 90%; /* Adjusted width for mobile responsiveness */
-      max-width: 600px; /* Max width to prevent stretching on larger screens */
+      border-radius: 30px; /* Smaller border-radius */
+      width: 70%; /* Adjusted width for mobile responsiveness */
+      max-width: 400px; /* Max width to prevent stretching on larger screens */
+      height: 70px; /* Adjusted height */
       animation: gradientMove 3s linear infinite alternate; /* Animation for gradient movement */
     }
 
@@ -45,6 +46,10 @@
       text-align: center;
     }
 
+    .socials {
+      margin-top: 20px;
+    }
+
     .pfp {
       position: relative;
       overflow: hidden;
@@ -55,6 +60,19 @@
       font-size: 16px;
       color: black;
       text-decoration: none;
+    }
+
+    .page-links {
+      text-align: center;
+      display: flex; /* Use flexbox */
+      justify-content: center; /* Center items horizontally */
+      align-items: center; /* Center items vertically */
+    }
+
+    .page-links a,
+    .page-links p {
+      margin: 0 5px; /* Add spacing between elements */
+      display: inline; /* Display elements inline */
     }
 
     /* Media query for mobile devices */
@@ -72,6 +90,19 @@
   <div class="headbar">
     <p class="title"><strong>austin_kden</strong></p>
   </div>
-  
+  <div class="socials">
+    <a href="https://www.instagram.com/austin_kden" target="blank_"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" style="width: 50px; height: 50px;"></a>
+    <a href="https://www.x.com/austin_kden" target="blank_"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg" style="width: 47px; height: 47px; margin-left: 10px;"></a>
+  </div>
+  <div>
+    <h2 style="margin-top: 15px;">Learn more about...</h2>
+  </div>
+  <div class="page-links">
+    <a href="https://dolphinkden.github.io/me/online-aviation"><strong>Flight Simulation</strong></a>
+    <p> - </p>
+    <a href="https://dolphinkden.github.io/me/irl-aviation"><strong>Aviation</strong></a>
+    <p> - </p>
+    <a href="https://dolphinkden.github.io/me/911-smfr"><strong>911</strong></a>
+  </div>
 </body>
 </html>
