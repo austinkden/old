@@ -12,35 +12,28 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      background: linear-gradient(217deg, rgba(255, 180, 180, .8), rgba(255, 180, 180, 0) 70.71%),
-                  linear-gradient(127deg, rgba(180, 255, 180, .8), rgba(180, 255, 180, 0) 70.71%),
-                  linear-gradient(336deg, rgba(180, 180, 255, .8), rgba(180, 180, 255, 0) 70.71%);
-      background-repeat: no-repeat; /* Prevent background from repeating */
-      background-size: cover; /* Cover the entire .headbar element */
-      height: 100vh; /* Full height of the viewport */
-      margin: 0; /* Remove default margin */
+      background: linear-gradient(217deg, rgba(30, 30, 30, .8), rgba(30, 30, 30, 0) 70.71%),
+                  linear-gradient(127deg, rgba(30, 30, 30, .8), rgba(30, 30, 30, 0) 70.71%),
+                  linear-gradient(336deg, rgba(30, 30, 30, .8), rgba(30, 30, 30, 0) 70.71%);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      margin: 0;
+      color: white; /* Text color in dark mode */
     }
 
     .headbar {
-      background-image: linear-gradient(to left, #ffc969, #ffc568, skyblue, #cf9fff, #cf9fff);
-      background-size: 300% 100%; /* Five colors, so triple the width for the gradient animation */
+      background-image: linear-gradient(to left, #ff6d00, #ff9100, #ffaa00, #ffd500, #ffe400);
+      background-size: 300% 100%;
       border-radius: 100px;
-      width: 90%; /* Adjusted width for mobile responsiveness */
-      max-width: 400px; /* Max width to prevent stretching on larger screens */
-      animation: gradientMove 3s linear infinite alternate; /* Animation for gradient movement */
-    }
-
-    @keyframes gradientMove {
-      0% {
-        background-position: 100% 0; /* Start from right */
-      }
-      100% {
-        background-position: 0 0; /* Move to left */
-      }
+      width: 90%;
+      max-width: 400px;
+      animation: gradientMove 3s linear infinite alternate;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Adding a subtle shadow */
     }
 
     .title {
-      font-size: 30px; /* Adjusted font size for mobile */
+      font-size: 30px;
       padding: 10px;
       text-align: center;
     }
@@ -57,27 +50,26 @@
 
     a {
       font-size: 16px;
-      color: black;
+      color: white;
       text-decoration: underline;
     }
 
     .page-links {
       text-align: center;
-      display: flex; /* Use flexbox */
-      justify-content: center; /* Center items horizontally */
-      align-items: center; /* Center items vertically */
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .page-links a,
     .page-links p {
-      margin: 0 5px; /* Add spacing between elements */
-      display: inline; /* Display elements inline */
+      margin: 0 5px;
+      display: inline;
     }
 
-    /* Media query for mobile devices */
     @media only screen and (max-width: 600px) {
       .title {
-        font-size: 24px; /* Adjust font size for smaller screens */
+        font-size: 24px;
       }
     }
 
@@ -88,15 +80,32 @@
     }
 
     .contact p {
-  display: block; /* or display: flex; */
-  margin-bottom: 5px; /* Add margin between the paragraphs */
+      display: block;
+      margin-bottom: 5px;
     }
     
+    /* Dark mode styles */
+    body,
+    .headbar {
+      background: linear-gradient(217deg, rgba(30, 30, 30, .8), rgba(30, 30, 30, 0) 70.71%),
+                  linear-gradient(127deg, rgba(30, 30, 30, .8), rgba(30, 30, 30, 0) 70.71%),
+                  linear-gradient(336deg, rgba(30, 30, 30, .8), rgba(30, 30, 30, 0) 70.71%);
+      color: white;
+    }
+
+    .headbar {
+      background-image: linear-gradient(to left, #ff6d00, #ff9100, #ffaa00, #ffd500, #ffe400);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    a {
+      color: white;
+    }
   </style>
 </head>
 <body>
   <div>
-    <img src="https://pbs.twimg.com/profile_images/1775345316340060160/Rb4r0OBI_400x400.jpg" style="height: 100px; width: 100px; border: solid 5px black; border-radius: 20px; margin: 12px; margin-top: 10px;" class="pfp">
+    <img src="https://pbs.twimg.com/profile_images/1775345316340060160/Rb4r0OBI_400x400.jpg" style="height: 100px; width: 100px; border: solid 5px white; border-radius: 20px; margin: 12px; margin-top: 10px;" class="pfp">
   </div>
   <div class="headbar">
     <p class="title"><strong>austin_kden</strong></p>
