@@ -15,99 +15,98 @@
       background: linear-gradient(217deg, rgba(255, 180, 180, .8), rgba(255, 180, 180, 0) 70.71%),
                   linear-gradient(127deg, rgba(180, 255, 180, .8), rgba(180, 255, 180, 0) 70.71%),
                   linear-gradient(336deg, rgba(180, 180, 255, .8), rgba(180, 180, 255, 0) 70.71%);
-      height: 100vh;
-      margin: 0;
-      overflow: hidden;
-      position: relative;
+      background-repeat: no-repeat; /* Prevent background from repeating */
+      background-size: cover; /* Cover the entire .headbar element */
+      height: 100vh; /* Full height of the viewport */
+      margin: 0; /* Remove default margin */
     }
 
-    @keyframes glide {
-      from {
-        transform: translateX(-120%);
+    .headbar {
+      background-image: linear-gradient(to left, #ffc969, #ffc568, skyblue, #cf9fff, #cf9fff);
+      background-size: 300% 100%; /* Five colors, so triple the width for the gradient animation */
+      border-radius: 100px;
+      width: 90%; /* Adjusted width for mobile responsiveness */
+      max-width: 400px; /* Max width to prevent stretching on larger screens */
+      animation: gradientMove 3s linear infinite alternate; /* Animation for gradient movement */
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 100% 0; /* Start from right */
       }
-      to {
-        transform: translateX(120%);
+      100% {
+        background-position: 0 0; /* Move to left */
       }
-    }
-
-    #airplane {
-      width: 10%;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%) rotate(90deg);
-      animation: glide 2s linear forwards;
-    }
-
-    .pfp {
-      height: 100px;
-      width: 100px;
-      border: solid 5px black;
-      border-radius: 20px;
-      margin: 12px;
-      margin-top: 10px;
     }
 
     .title {
-      font-size: 30px;
+      font-size: 30px; /* Adjusted font size for mobile */
       padding: 10px;
       text-align: center;
     }
 
     .socials {
-      display: flex;
-      justify-content: center;
       margin-top: 20px;
     }
 
-    .socials img {
-      width: 50px;
-      height: 50px;
-      margin-left: 10px;
+    .pfp {
+      position: relative;
+      overflow: hidden;
+      animation: rainbowBorder 5s linear infinite alternate;
+    }
+
+    a {
+      font-size: 16px;
+      color: black;
+      text-decoration: underline;
     }
 
     .page-links {
       text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 15px;
+      display: flex; /* Use flexbox */
+      justify-content: center; /* Center items horizontally */
+      align-items: center; /* Center items vertically */
     }
 
     .page-links a,
     .page-links p {
-      margin: 0 5px;
+      margin: 0 5px; /* Add spacing between elements */
+      display: inline; /* Display elements inline */
+    }
+
+    /* Media query for mobile devices */
+    @media only screen and (max-width: 600px) {
+      .title {
+        font-size: 24px; /* Adjust font size for smaller screens */
+      }
     }
 
     .contact {
-      text-align: center;
       margin-top: 125px;
+      text-align: center;
+      align-items: center;
     }
 
-    .contact a {
-      text-decoration: underline;
+    .contact p {
+  display: block; /* or display: flex; */
+  margin-bottom: 5px; /* Add margin between the paragraphs */
     }
+    
   </style>
 </head>
 <body>
-
-  <img id="airplane" src="https://pngfre.com/wp-content/uploads/Airplane-1.png" alt="Airplane">
-
   <div>
-    <img src="https://pbs.twimg.com/profile_images/1775345316340060160/Rb4r0OBI_400x400.jpg" class="pfp">
+    <img src="https://pbs.twimg.com/profile_images/1775345316340060160/Rb4r0OBI_400x400.jpg" style="height: 100px; width: 100px; border: solid 5px black; border-radius: 20px; margin: 12px; margin-top: 10px;" class="pfp">
   </div>
-  <div>
+  <div class="headbar">
     <p class="title"><strong>austin_kden</strong></p>
   </div>
   <div class="socials">
-    <a href="https://www.instagram.com/austin_kden" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png">
-    </a>
-    <a href="https://www.x.com/austin_kden" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg" style="width: 47px; height: 47px;">
-    </a>
+    <a href="https://www.instagram.com/austin_kden" target="blank_"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" style="width: 50px; height: 50px;"></a>
+    <a href="https://www.x.com/austin_kden" target="blank_"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg" style="width: 47px; height: 47px; margin-left: 10px;"></a>
   </div>
   <div>
-    <h2>Learn more about...</h2>
+    <h2 style="margin-top: 15px;">Learn more about...</h2>
   </div>
   <div class="page-links">
     <a href="https://dolphinkden.github.io/me/online-aviation"><strong>Flight Simulation</strong></a>
@@ -118,7 +117,7 @@
   </div>
   <div class="contact">
     <p>For any inquiries, contact me on <a href="https://instagram.com/austin_kden"><strong>Instagram</strong></a> or <a href="https://x.com/austin_kden"><strong>X</strong></a>.</p>
-    <p>For any <strong>professional</strong> inquiries, contact me via email: <a href="mailto:austin@aircraftmail.com"><strong>austin@aircraftmail.com</strong></a>.</p>
+    <p>For any <span style="italic">professional</span> inquiries, contact me via email: <a href="mailto:austin@aircraftmail.com" style="text-decoration: underline;"><strong>austin@aircraftmail.com</strong></a>.</p>
   </div>
 </body>
 </html>
