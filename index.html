@@ -88,27 +88,27 @@
     }
 
     .contact p {
-  display: block; /* or display: flex; */
-  margin-bottom: 5px; /* Add margin between the paragraphs */
+      display: block; /* or display: flex; */
+      margin-bottom: 5px; /* Add margin between the paragraphs */
     }
 
     #flying-plane {
-  position: fixed; /* Ensures the image can move freely across the entire screen */
-  top: 50%; /* Positions the image vertically at the center */
-  transform: translateY(-50%); /* Ensures the image is centered along its height */
-  width: 100px; /* Adjust width as needed */
-  height: auto; /* Maintain aspect ratio */
-  z-index: 1000; /* Make sure the image appears above other content */
-  animation: slideAcross 4s ease-in-out forwards; /* Define the animation */
+      position: fixed; /* Ensures the image can move freely across the entire screen */
+      top: 50%; /* Positions the image vertically at the center */
+      transform: translateY(-50%); /* Ensures the image is centered along its height */
+      width: 100px; /* Adjust width as needed */
+      height: auto; /* Maintain aspect ratio */
+      z-index: 1000; /* Make sure the image appears above other content */
+      animation: slideAcross 4s ease-in-out forwards; /* Define the animation */
 }
 
-@keyframes slideAcross {
-  from {
-    right: -120px; /* Start from outside the right edge of the screen */
-  }
-  to {
-    left: 100%; /* Move to the left until it's completely off screen */
-  }
+    @keyframes slideAcross {
+      from {
+        right: -120px; /* Start from outside the right edge of the screen */
+      }
+      to {
+        left: 100%; /* Move to the left until it's completely off screen */
+      }
 }
 
     
