@@ -18,20 +18,23 @@
       height: 100vh;
       margin: 0;
       overflow: hidden; /* Hide anything outside the viewport */
+      position: relative; /* Required for absolute positioning inside */
     }
 
     @keyframes glide {
       from {
-        transform: translateX(-100%); /* Start from outside the screen on the left */
+        transform: translateX(-120%); /* Start from further outside the left */
       }
       to {
-        transform: translateX(100%); /* End outside the screen on the right */
+        transform: translateX(120%); /* End further outside the right */
       }
     }
 
     #airplane {
+      width: 10%; /* Smaller size, adjust percentage as necessary */
       position: absolute;
       top: 50%; /* Center vertically */
+      transform: translateY(-50%); /* Offset by half its height to truly center */
       animation: glide 2s linear forwards; /* Only run once */
     }
 
